@@ -25,7 +25,14 @@
 ----
 Контроль версий `poetry`
 ----
-1. ```poetry init```
+1. 
+```
+    poetry init
+```
+2. Синхронизация между
+```
+poetry install --sync
+```
 
 ----
 Использование базы данных Postgres + Docker
