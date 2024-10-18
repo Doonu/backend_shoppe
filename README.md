@@ -11,6 +11,10 @@
    pip install fastapi[all] 
    pip install sqlalchemy alembic psycopg2
 ```
+4. Сохрнанение зависимостей
+```
+ pip freeze > reaquirements.txt
+```
 
  В ходе установки добавлены следующие пакеты:
 - FastAPI и его основные зависимости: Starlette и Pydantic, которые обеспечивают маршрутизацию, обработку запросов и валидацию данных.
@@ -18,6 +22,10 @@
 - Поддержка различных форматов данных и безопасности: PyYAML, UJSON, Orjson, и Email-validator.
 - Дополнительные пакеты для улучшения работы и разработки: Pydantic-settings и Pydantic-extra-types для расширенной конфигурации и типов, Typer для работы с CLI, а также Rich для вывода в консоль.
 
+----
+Контроль версий `poetry`
+----
+1. ```poetry init```
 
 ----
 Использование базы данных Postgres + Docker

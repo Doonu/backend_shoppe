@@ -1,11 +1,16 @@
 from typing import List
 
+import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
 app = FastAPI(
     title="Shop app"
 )
+
+if __name__ == '__main__':
+    uvicorn.run("main:app", reload=True)
+
 
 
 class Product(BaseModel):
@@ -24,7 +29,7 @@ fake_product_data = [
 
 @app.get("/product", response_model=List[Product])
 def get_product(limit: int = 1, offset: int = 1):
-    return fake_product_data[offset:][:limit]
+    return fake_product_data[offset - 1:][:limit]
 
 
 @app.post("/product/{product_id}")
